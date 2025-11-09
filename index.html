@@ -39,6 +39,15 @@
     .note{font-size:.95rem;color:#475467;background:#F8FAFC;border:1px solid #E4E7EC;border-radius:8px;padding:10px 12px}
     .sitemap-list{columns:2;gap:24px;max-width:980px}
     @media (max-width:720px){.sitemap-list{columns:1}}
+    /* Footer sitemap */
+    .footer-sitemap{margin:18px 0 0; padding-top:12px; border-top:1px solid #e4e7ec}
+    .footer-sitemap h5{margin:0 0 8px; font-weight:600}
+    .footer-sitemap ul{list-style:none; padding:0; margin:0; columns:2; column-gap:24px}
+    .footer-sitemap ul li{break-inside:avoid; margin:6px 0}
+    .footer-sitemap a{color:#0b3d91; text-decoration:none}
+    .footer-sitemap a:hover{text-decoration:underline}
+    @media (max-width:720px){.footer-sitemap ul{columns:1}}
+
   </style>
 
   <!-- Modern jQuery (fallback to legacy if plugins need it) -->
@@ -78,9 +87,9 @@
           <li class="tab">
             <a href="#blog"><i class="fa-solid fa-rss"></i><span>Blog</span></a>
           </li>
-          <li class="tab">
+          <!-- <li class="tab">
             <a href="#sitemap"><i class="fa-solid fa-sitemap"></i><span>Sitemap</span></a>
-          </li>
+          </li> -->
           <li class="tab">
             <a href="#contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
           </li>
@@ -145,7 +154,7 @@
                   <div class="item-box clearfix">
                     <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                     <div class="item-data">
-                      <h3><a href="https://linkedin.com/aviel-amitay">linkedin.com/aviel-amitay</a></h3>
+                      <h3><a href="https://linkedin.com/in/aviel-amitay"></a></h3>
                       <p>LinkedIn</p>
                     </div>
                   </div>
@@ -194,9 +203,11 @@
             <section class="clearfix">
               <h3>Blog</h3>
               <p class="note">
-                This tab links to <code>/blog/</code>. To add a blog like
+                This is a dev Blog tab links to <code>/blog/ </code>. 
+
+                Credit to:
                 <a href="https://github.com/nirgeier/nirgeier.github.io/tree/master" target="_blank" rel="noopener">this example</a>,
-                create a <code>blog</code> folder in this repo and enable GitHub Pages/Jekyll there (e.g., with <code>_config.yml</code> and <code>_posts/</code>).
+                <!-- create a <code>blog</code> folder in this repo and enable GitHub Pages/Jekyll there (e.g., with <code>_config.yml</code> and <code>_posts/</code>). -->
               </p>
               <p>
                 <a class="btn" href="blog/" target="_self" rel="noopener">
@@ -206,29 +217,6 @@
             </section>
           </div>
           <!-- /Blog -->
-
-          <!-- Sitemap -->
-          <div id="sitemap" role="region" aria-label="Sitemap">
-            <section class="clearfix">
-              <h3>HTML Sitemap</h3>
-              <p class="note">Quick access to all main sections and files on this site.</p>
-              <ul class="sitemap-list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume (PDF)</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="Aviel_Amitay_resume.pdf">Download CV (PDF)</a></li>
-                <li><a href="favicon.ico">favicon.ico</a></li>
-                <li><a href="apple-touch-icon-precomposed.png">apple-touch-icon</a></li>
-                <li><a href="apple-touch-icon-72x72-precomposed.png">apple-touch-icon 72×72</a></li>
-                <li><a href="apple-touch-icon-114x114-precomposed.png">apple-touch-icon 114×114</a></li>
-                <li><a href="apple-touch-icon-144x144-precomposed.png">apple-touch-icon 144×144</a></li>
-              </ul>
-              <p class="note">For search engines, also add a <code>sitemap.xml</code> in the repo root (I can generate one for you).</p>
-            </section>
-          </div>
-          <!-- /Sitemap -->
 
           <!-- Contact -->
           <div id="contact" role="region" aria-label="Contact">
@@ -271,9 +259,22 @@
         </div>
       </div>
 
-      <footer>
-        <p>Together, we are stronger — and there’s no limit to our ambition.</p>
-      </footer>
+     <footer>
+  <p>Together, we are stronger — and there’s no limit to our ambition.</p>
+
+  <nav class="footer-sitemap" aria-label="Site map">
+    <h5>Sitemap</h5>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume (PDF)</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="Aviel_Amitay_resume.pdf">Download CV (PDF)</a></li>
+    </ul>
+  </nav>
+</footer>
+
 
     </div><!-- #main -->
   </div><!-- #main-container -->
