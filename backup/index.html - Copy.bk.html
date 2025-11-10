@@ -27,13 +27,28 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-  <!-- Base and main styles -->
-  <link rel="stylesheet" href="css/base.css" />
+  <!-- Existing site CSS -->
+  <link rel="stylesheet" href="css/normalize.min.css" />
   <link rel="stylesheet" href="css/main.css" />
 
-  <!-- Utilities and component styles -->
-  <link rel="stylesheet" href="css/utilities.css" />
-  <link rel="stylesheet" href="css/projects.css" />
+  <!-- Small style add-on for buttons -->
+  <style>
+    .btn{display:inline-block;padding:8px 12px;border-radius:6px;background:#0b3d91;color:#fff;text-decoration:none}
+    .btn:hover{background:#092e6d}
+    .sny-icon i{color:#0b3d91}
+    .note{font-size:.95rem;color:#475467;background:#F8FAFC;border:1px solid #E4E7EC;border-radius:8px;padding:10px 12px}
+    .sitemap-list{columns:2;gap:24px;max-width:980px}
+    @media (max-width:720px){.sitemap-list{columns:1}}
+    /* Footer sitemap */
+    .footer-sitemap{margin:18px 0 0; padding-top:12px; border-top:1px solid #e4e7ec}
+    .footer-sitemap h5{margin:0 0 8px; font-weight:600}
+    .footer-sitemap ul{list-style:none; padding:0; margin:0; columns:2; column-gap:24px}
+    .footer-sitemap ul li{break-inside:avoid; margin:6px 0}
+    .footer-sitemap a{color:#0b3d91; text-decoration:none}
+    .footer-sitemap a:hover{text-decoration:underline}
+    @media (max-width:720px){.footer-sitemap ul{columns:1}}
+
+  </style>
 
   <!-- Modern jQuery (fallback to legacy if plugins need it) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -89,9 +104,11 @@
                 </div>
                 <div class="info">
                   <h4>Aviel Amitay</h4>
-                  <h5>IT & DevOps Automation Specialist</h5>
+                  <h5>IT & Automation Specialist</h5>
                   <p>
-                    As an IT & DevOps Automation Specialist, I architect, automate, and maintain reliable IT infrastructures that keep organizations running efficiently. By transforming complex processes into stable, documented systems, I reduce firefighting and empower teams to focus on innovation. I’m now looking to contribute these strengths to a forward-thinking company in a full-time role.
+                    I design, automate, and maintain reliable IT environments for small and medium-sized businesses and private clients.
+                    My focus is on turning complex processes into stable, documented, and maintainable systems — fewer firefighting moments,
+                    more structured work.
                   </p>
                 </div>
               </div>
@@ -134,7 +151,7 @@
                   <div class="item-box clearfix">
                     <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                     <div class="item-data">
-                      <h3><a href="https://linkedin.com/in/aviel-amitay">Linkedin</a></h3>
+                      <h3><a href="https://linkedin.com/in/aviel-amitay"></a></h3>
                       <p>LinkedIn</p>
                     </div>
                   </div>
@@ -161,90 +178,19 @@
           <!-- Projects -->
           <div id="portfolio" role="region" aria-label="Projects">
             <section class="clearfix">
-              <h4><i class="fa-solid fa-user-gear" aria-hidden="true"></i> Projects</h4>
-              <div class="projects-grid">
-                <!-- Project card: Amitay.dev -->
-                <article class="project-card">
-                  <img class="project-thumb" src="images/amitay-dev-screenshot.png" alt="Screenshot of Amitay.dev">
-                  <h5 class="project-title">Amitay.dev — personal website &amp; services</h5>
-                  <p class="project-desc">My primary site for IT &amp; DevOps automation services, branding, and contact.</p>
-                  <div class="project-tags">
-                    <!-- <span class="project-tag">Google Sites</span> -->
-                    <span class="project-tag">Portfolio</span>
-                    <span class="project-tag">Services</span>
+              <div class="g1">
+                <div class="sny-icon-box">
+                  <div class="sny-icon-content">
+                    <div class="sny-icon"><i class="fa-solid fa-user-gear" aria-hidden="true"></i></div>
+                    <h4>Examples</h4>
+
+                    <!-- Duplicate these lines to add more examples -->
+                    <a href="https://www.amitay.dev" target="_blank" rel="noopener">Personal site — Amitay Tech Solutions</a><p></p>
+                    <a href="https://github.com/Aviel-Amitay" target="_blank" rel="noopener">GitHub — selected repositories</a><p></p>
                   </div>
-                  <div class="project-actions">
-                    <a class="btn--primary" href="https://www.amitay.dev" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Live</a>
-                  </div>
-                </article>
-                <!-- Project card: CollegeIT.info -->
-                <article class="project-card">
-                  <img class="project-thumb" src="images/collegeit-screenshot.png" alt="Screenshot of CollegeIT.info">
-                  <h5 class="project-title">CollegeIT — network management courses &amp; IT training</h5>
-                  <p class="project-desc">Educational platform with curated IT courses, guides, and network management tutorials.</p>
-                  <div class="project-tags">
-                    <span class="project-tag">Education</span>
-                    <span class="project-tag">Courses</span>
-                    <span class="project-tag">Networking</span>
-                  </div>
-                  <div class="project-actions">
-                    <a class="btn--primary" href="https://www.collegeit.info" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Live</a>
-                  </div>
-                </article>
-                <!-- Project card: IT Apps -->
-                <article class="project-card">
-                  <img class="pinned-card"
-                       src="https://github-readme-stats.vercel.app/api/pin/?username=Aviel-Amitay&amp;repo=it_apps&amp;border_color=e4e7ec"
-                       alt="GitHub card for it_apps">
-                  <h5 class="project-title">IT&nbsp;Apps — automation scripts for IT operations</h5>
-                  <p class="project-desc">
-                    Collection of Bash scripts to automate common IT tasks including user provisioning, VM management,
-                    backups and environment setup.
-                  </p>
-                  <div class="project-tags">
-                    <span class="project-tag">Bash</span>
-                    <span class="project-tag">Automation</span>
-                    <span class="project-tag">IT&nbsp;Ops</span>
-                  </div>
-                  <div class="project-actions">
-                    <a class="btn--ghost"
-                       href="https://github.com/Aviel-Amitay/it_apps"
-                       target="_blank" rel="noopener">
-                      <i class="fa-brands fa-github"></i> Code
-                    </a>
-                  </div>
-                </article>
-                <!-- Project card: Multi Server User Manager -->
-                <article class="project-card">
-                  <img class="pinned-card" src="https://github-readme-stats.vercel.app/api/pin/?username=Aviel-Amitay&amp;repo=multi-server-user-manager&amp;border_color=e4e7ec" alt="GitHub card for multi-server-user-manager">
-                  <h5 class="project-title">Multi Server User Manager</h5>
-                  <p class="project-desc">Bash automation tool to create, sync, and remove users across multiple Linux servers simultaneously.</p>
-                  <div class="project-tags">
-                    <span class="project-tag">Bash</span>
-                    <span class="project-tag">Automation</span>
-                    <span class="project-tag">Linux</span>
-                    <span class="project-tag">Local User</span>
-                  </div>
-                  <div class="project-actions">
-                    <a class="btn--ghost" href="https://github.com/Aviel-Amitay/multi-server-user-manager" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
-                  </div>
-                </article>
-                <!-- Project card: GitHub profile -->
-                <article class="project-card">
-                  <img class="pinned-card" src="https://github-readme-stats.vercel.app/api?username=Aviel-Amitay&amp;show_icons=true&amp;border_color=e4e7ec" alt="GitHub stats for Aviel-Amitay">
-                  <h5 class="project-title">GitHub — open source projects</h5>
-                  <p class="project-desc">Collection of automation scripts and DevOps utilities including Jenkins, Chef and backup tools.</p>
-                  <div class="project-tags">
-                    <span class="project-tag">Bash</span>
-                    <span class="project-tag">Ruby</span>
-                    <span class="project-tag">PowerShell</span>
-                    <span class="project-tag">OpenSource</span>
-                  </div>
-                  <div class="project-actions">
-                    <a class="btn--ghost" href="https://github.com/Aviel-Amitay" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Explore</a>
-                  </div>
-                </article>
+                </div>
               </div>
+              <div class="break"></div>
             </section>
           </div>
           <!-- /Projects -->
@@ -310,20 +256,22 @@
         </div>
       </div>
 
-      <footer>
-        <p>Together, we are stronger — and there’s no limit to our ambition.</p>
-        <nav class="footer-sitemap" aria-label="Site map">
-          <h5>Sitemap</h5>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="Aviel_Amitay_resume.pdf">Download CV (PDF)</a></li>
-          </ul>
-        </nav>
-      </footer>
+     <footer>
+  <p>Together, we are stronger — and there’s no limit to our ambition.</p>
+
+  <nav class="footer-sitemap" aria-label="Site map">
+    <h5>Sitemap</h5>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume (PDF)</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="Aviel_Amitay_resume.pdf">Download CV (PDF)</a></li>
+    </ul>
+  </nav>
+</footer>
+
 
     </div><!-- #main -->
   </div><!-- #main-container -->

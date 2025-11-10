@@ -1,0 +1,113 @@
+/* Utilities and helper classes for Aviel Amitay portfolio */
+
+/* Primary button */
+.btn--primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #0b3d91;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #0b3d91;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.btn--primary:hover {
+  background: #092e6d;
+  transform: translateY(-1px);
+}
+
+/* Ghost button */
+.btn--ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #fff;
+  color: #0b3d91;
+  border: 1px solid #0b3d91;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.btn--ghost:hover {
+  background: #eff3fb;
+  transform: translateY(-1px);
+}
+
+/* Legacy button (for backward compatibility) */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #0b3d91;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.btn:hover {
+  background: #092e6d;
+  transform: translateY(-1px);
+}
+
+/* Note / callout box */
+.note {
+  font-size: 0.95rem;
+  color: #475467;
+  background: #F8FAFC;
+  border: 1px solid #E4E7EC;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+/* Sitemap list (used inside HTML sitemap) */
+.sitemap-list {
+  columns: 2;
+  gap: 24px;
+  max-width: 980px;
+}
+@media (max-width: 720px) {
+  .sitemap-list {
+    columns: 1;
+  }
+}
+
+/* Footer sitemap styling */
+.footer-sitemap {
+  margin: 18px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #e4e7ec;
+}
+.footer-sitemap h5 {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+.footer-sitemap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 24px;
+}
+.footer-sitemap ul li {
+  break-inside: avoid;
+  margin: 6px 0;
+}
+.footer-sitemap a {
+  color: #0b3d91;
+  text-decoration: none;
+}
+.footer-sitemap a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 720px) {
+  .footer-sitemap ul {
+    columns: 1;
+  }
+}
+
+/* Adjust FontAwesome icons in sny-icon */
+.sny-icon i {
+  color: #0b3d91;
+}

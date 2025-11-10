@@ -768,3 +768,42 @@ Change widths as necessary
 .footer-sitemap a{ color:#0b3d91; text-decoration:none }
 .footer-sitemap a:hover{ text-decoration:underline }
 @media (max-width:720px){ .footer-sitemap ul{ columns:1 } }
+
+/* =========================
+   Projects – dynamic card grid
+   ========================= */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+  margin-top:14px;
+}
+
+.project-card{
+  background:#fff; border:1px solid #e4e7ec; border-radius:14px; padding:16px;
+  box-shadow:0 2px 6px rgba(16,24,40,.06);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.project-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 20px rgba(16,24,40,.12);
+}
+
+.project-thumb{
+  width:100%; aspect-ratio:16/9; object-fit:cover;
+  border-radius:10px; border:1px solid #eef2f6; margin-bottom:12px;
+}
+
+.project-title{ margin:0 0 6px; font-size:1.05rem; font-weight:700 }
+.project-desc{ margin:0 0 10px; color:#475467; line-height:1.45 }
+
+.project-tags{ display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px }
+.project-tag{
+  font-size:.78rem; padding:4px 8px; border-radius:999px;
+  background:#f2f4f7; color:#344054; border:1px solid #e4e7ec;
+}
+
+.project-actions{ display:flex; gap:10px; flex-wrap:wrap }
+
+/* Optional: GitHub pinned/stat images inside cards */
+.pinned-card{ width:100%; border-radius:10px; border:1px solid #e4e7ec }
